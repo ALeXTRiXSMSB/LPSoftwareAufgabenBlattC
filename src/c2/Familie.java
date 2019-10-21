@@ -6,27 +6,23 @@ public class Familie {
 
     private ArrayList mitglieder;
 
-    public Familie(String _vater, String _mutter){
-        Person vater = new Person();
-        Person mutter = new Person();
-        vater.setName(_vater);
-        mutter.setName(_mutter);
-    }
-
-    public void addKind(String kind){
-
-    }
-
     public enum Familienmitglied{
         Vater,Mutter,Kind;
     }
 
+    public Familie(String _vater, String _mutter){
+
+    }
+
     public ArrayList getMitglieder() {
-        //MUss noch bearbeitet werden
         return mitglieder;
     }
 
     public void setMitglieder(ArrayList mitglieder) {
         this.mitglieder = mitglieder;
+    }
+
+    public void addKind(String kind){
+
     }
 }
