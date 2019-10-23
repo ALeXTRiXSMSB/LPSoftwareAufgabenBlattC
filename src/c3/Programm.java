@@ -4,9 +4,8 @@ public class Programm {
 
     public static void main(String[] args) {
         Familie familie = new Familie("vater","mutter");
-        /**for(String name : familie){
-            System.out.println(name)
+        for(String name : familie.getMitglieder()){
+            System.out.println(name);
         }
-         **/
     }
 }

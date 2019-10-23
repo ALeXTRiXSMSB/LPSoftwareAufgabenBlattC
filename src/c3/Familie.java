@@ -1,10 +1,6 @@
 package c3;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.ListIterator;
-import java.util.Spliterator;
-import java.util.function.Consumer;
 
 public class Familie{
 
@@ -23,6 +19,10 @@ public class Familie{
                 this.mitglieder.add(_mutter);
                 this.mitglieder.add(_vater);
             }
+    }
+
+    public ArrayList<String> getMitglieder(){
+        return this.mitglieder;
     }
 
     public String getMitglieder(Familienmitglied typ) {
