@@ -1,8 +1,12 @@
-package c2;
+package c3;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.ListIterator;
+import java.util.Spliterator;
+import java.util.function.Consumer;
 
-public class Familie {
+public class Familie{
 
     private ArrayList<String> mitglieder = new ArrayList();
 
