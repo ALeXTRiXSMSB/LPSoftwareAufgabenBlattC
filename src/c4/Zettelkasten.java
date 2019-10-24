@@ -56,13 +56,22 @@ public class Zettelkasten implements Iterable<Medium> {
         }
     }
 
-    public Medium findmMedium(String titel){
+    public Object findmMedium(String titel){
+        ArrayList<Medium> rueckgabe = new ArrayList<>();
         for(Medium m:myZettelkasten){
             if(m.getTitel().equals(titel)){
-                return m;
+                rueckgabe.add(m);
             }
         }
-        return null;
+        if(rueckgabe.size() == 1){
+            return rueckgabe.get(0);
+        }else{
+            if(rueckgabe != null){
+                return rueckgabe;
+            }else{
+                return null;
+            }
+        }
     }
 
     @Override
