@@ -1,8 +1,9 @@
 package c3;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
-public class Familie{
+public class Familie implements Iterable<String>{
 
     private ArrayList<String> mitglieder = new ArrayList();
 
@@ -61,5 +62,10 @@ public class Familie{
             } else {
                 this.mitglieder.add(kind);
             }
+    }
+
+    @Override
+    public Iterator<String> iterator() {
+        return this.mitglieder.iterator();
     }
 }

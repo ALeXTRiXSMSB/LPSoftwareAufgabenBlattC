@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15ccec6d-f6ad-4c66-9355-74cbc94250bb" name="Default Changelist" comment="AufgabenBlattC C1 bearbeitet&#10;AufgabenBlattC C2 bearbeitet">
+    <list default="true" id="15ccec6d-f6ad-4c66-9355-74cbc94250bb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/c3/Familie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/c3/Familie.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/c3/Programm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/c3/Programm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/c4/Bibliothek.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/c4/Buch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/c4/CD.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/c4/Medium.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/c4/Zeitschrift.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/c4/Zettelkasten.java" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,7 +66,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Programm (1)">
+  <component name="RunManager" selected="Application.Bibliothek">
+    <configuration name="Bibliothek" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="c4.Bibliothek" />
+      <module name="AufgabenBlattC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="c4.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Programm (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="c3.Programm" />
+      <module name="AufgabenBlattC" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="c3.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Programm" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="c1.Programm" />
       <module name="AufgabenBlattC" />
@@ -89,6 +121,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Bibliothek" />
         <item itemvalue="Application.Programm (1)" />
         <item itemvalue="Application.Programm" />
       </list>
@@ -111,7 +144,8 @@
       <workItem from="1540326539379" duration="8000" />
       <workItem from="1540369891702" duration="598000" />
       <workItem from="1571640335356" duration="1443000" />
-      <workItem from="1571846334132" duration="5730000" />
+      <workItem from="1571846334132" duration="6439000" />
+      <workItem from="1571910423982" duration="8197000" />
     </task>
     <task id="LOCAL-00001" summary="AufgabenBlattC C1 bearbeitet">
       <created>1571641558615</created>
@@ -134,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1571851268734</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="AufgabenBlattC C1 bearbeitet&#10;AufgabenBlattC C2 bearbeitet">
+      <created>1571852180227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1571852180227</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
