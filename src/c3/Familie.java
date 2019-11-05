@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class Familie implements Iterable<String>{
 
-    private ArrayList<String> mitglieder = new ArrayList();
+    private ArrayList<String> mitglieder = new ArrayList<String>();
 
     public enum Familienmitglied {
         Vater, Mutter, Kind;

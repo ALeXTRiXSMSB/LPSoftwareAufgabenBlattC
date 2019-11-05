@@ -7,7 +7,8 @@ public class Programm {
         familie.addKind("Kind1");
         familie.addKind("Kind2");
         familie.addKind("Kind3");
-        for(String name : familie.getMitglieder()){
+        for(String name : familie){
+            name = "bob";
             System.out.println(name);
         }
     }

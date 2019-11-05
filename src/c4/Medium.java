@@ -53,6 +53,9 @@ public abstract class Medium implements Comparable<Medium>{
     }
 
     public int compareTo(Medium m){
-        return this.getTitel().compareTo(m.titel);
+        if(this.titel.equals(m.getTitel())){
+            return this.getClass().toString().compareTo(m.getClass().toString());
+        }
+        return this.titel.compareTo(m.getTitel());
     }
 }

@@ -75,7 +75,7 @@ public class CD extends Medium {
         StringBuilder rueckgabe = new StringBuilder();
         rueckgabe.append(super.calculateRepresentation() + " ")
                 .append("Label: " + this.getLabel() + " ")
-                .append("Künstler" + this.getKuenstler() + " ");
+                .append("Künstler: " + this.getKuenstler() + " ");
         return rueckgabe.toString();
     }
 }

@@ -12,20 +12,42 @@ public class Bibliothek {
         zettelkasten.addMedium(new Zeitschrift("Der Spiegel","0038-7452","54",6));
 
 
-        Object o = zettelkasten.findmMedium("Der Spiegel");
-        Medium tmp = (Medium)o;
-        System.out.println(tmp.calculateRepresentation());
-        System.out.println(zettelkasten.dropMedium("Der Spiegel"));
-        System.out.println(zettelkasten.sort(zettelkasten.aufsteigend));
+        zettelkasten.addMedium(new CD("Test","Test","Test"));
+        zettelkasten.addMedium(new Buch("Test",1995,"Test","3-411-04013-0","3-411-04013-0"));
+        zettelkasten.addMedium(new ElektronischesMedium("Test","Test"));
+        zettelkasten.addMedium(new Zeitschrift("Test","Test","Test",0));
+        zettelkasten.addMedium(new CD("Test","Test","Test"));
+        zettelkasten.addMedium(new CD("Test","Test","Test"));
+        zettelkasten.addMedium(new CD("Test","Test","Test"));
+        zettelkasten.addMedium(new CD("Test","Test","Test"));
+        zettelkasten.addMedium(new Buch("Test",1995,"Test","3-411-04013-0","3-411-04013-0"));
+        zettelkasten.addMedium(new ElektronischesMedium("Test","Test"));
+        zettelkasten.addMedium(new Zeitschrift("Test","Test","Test",0));
+        zettelkasten.addMedium(new CD("Test","Test","Test"));
+        zettelkasten.addMedium(new CD("Test","Test","Test"));
+        zettelkasten.addMedium(new CD("Test","Test","Test"));
+
+
+        /**
+        zettelkasten.dropMedium("Test");
+        System.out.println(zettelkasten.sort(zettelkasten.aBISz));
 
         for(Medium m : zettelkasten){
             System.out.println(m.calculateRepresentation());
         }
 
-        System.out.println(zettelkasten.sort(zettelkasten.absteigend));
+        System.out.println(zettelkasten.sort(zettelkasten.zBISa));
 
         for(Medium m : zettelkasten){
             System.out.println(m.calculateRepresentation());
         }
+        **/
+        DatabasePersistency test = new DatabasePersistency();
+        test.save(zettelkasten,"test.store");
+        Zettelkasten neu = test.load("test.store");
+        for(Medium m : neu){
+            System.out.println(m.calculateRepresentation());
+        }
+
     }
 }

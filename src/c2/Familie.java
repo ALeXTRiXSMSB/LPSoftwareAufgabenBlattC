@@ -52,7 +52,7 @@ public class Familie {
     }
 
     public void addKind(String kind) {
-            if (kind.isBlank()) {
+            if (kind == null || kind.isBlank()) {
                 throw new IllegalArgumentException();
             } else {
                 this.mitglieder.add(kind);
