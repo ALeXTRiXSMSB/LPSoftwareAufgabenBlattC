@@ -4,19 +4,34 @@ import java.util.*;
 
 public class Zettelkasten implements Iterable<Medium> {
 
+    /**
+     * Klassenattribute
+     */
     private ArrayList<Medium> myZettelkasten;
     private boolean issorted = false;
     public final int aBISz = 0;
     public final int zBISa = 1;
 
+    /**
+     * Konstruktor
+     */
     public Zettelkasten(){
         this.myZettelkasten = new ArrayList<>();
     }
 
+    /**
+     * Konstruktor
+     * @param myZettelkasten
+     */
     public Zettelkasten(ArrayList<Medium> myZettelkasten) {
         this.myZettelkasten = myZettelkasten;
     }
 
+    /**
+     * Methode zum hinzufügen eines Mediums an die Arrayliste
+     * @param m
+     * @return
+     */
     public boolean addMedium(Medium m){
         switch(m.getClass().getSimpleName()){
             case "Buch":{
@@ -46,6 +61,10 @@ public class Zettelkasten implements Iterable<Medium> {
         }
     }
 
+    /**
+     * Methode zum löschen eines Mediums
+     * @param titel
+     */
     public void dropMedium(String titel){
         ArrayList<Medium> tmp = findMedium(titel);
         if(tmp != null){
@@ -80,6 +99,10 @@ public class Zettelkasten implements Iterable<Medium> {
         }
     }
 
+    /**
+     * Methode zum Löschen von bestimmten Medien mit gleichem namen
+     * @param titel
+     */
     private void dropMedien(String titel){
         ArrayList<Medium> tmp = findMedium(titel);
         Scanner tastatur = new Scanner(System.in);
@@ -104,11 +127,20 @@ public class Zettelkasten implements Iterable<Medium> {
         }
     }
 
+    /**
+     * Methode zum löschen von allen Medien mit dem gleichen namen
+     * @param titel
+     */
     private void dropAllMedien(String titel){
         ArrayList<Medium> tmp = findMedium(titel);
         this.myZettelkasten.removeAll(tmp);
     }
 
+    /**
+     * MEthode zum finden eines Mediums anhand des Titels
+     * @param titel
+     * @return
+     */
     public ArrayList<Medium> findMedium(String titel){
         ArrayList<Medium> rueckgabe = new ArrayList<>();
         for(Medium m:myZettelkasten){
@@ -124,16 +156,30 @@ public class Zettelkasten implements Iterable<Medium> {
         }
     }
 
+    /**
+     * Überschriebene Methode aus dem Iterable Interface
+     * @return
+     */
     @Override
     public Iterator<Medium> iterator() {
         return this.myZettelkasten.iterator();
     }
 
+    /**
+     * Methode zum sortieren aller Doppelten Einträge in der Liste
+     * @param unsortet
+     * @return
+     */
     private ArrayList<Medium> sortDuplicates(ArrayList<Medium> unsortet){
         Collections.sort(unsortet);
         return unsortet;
     }
 
+    /**
+     * Methode zum sortieren der Einträge anhand des Titels forwärts oder rückwärts ist möglich
+     * @param richtung
+     * @return
+     */
     public boolean sort(int richtung){
         if(!this.issorted){
             Collections.sort(myZettelkasten);

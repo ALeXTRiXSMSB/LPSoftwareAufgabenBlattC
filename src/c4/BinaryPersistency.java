@@ -4,6 +4,11 @@ import java.io.*;
 
 public class BinaryPersistency implements Persistency {
 
+    /**
+     *
+     * @param zk
+     * @param dateiname
+     */
     @Override
     public void save(Zettelkasten zk, String dateiname) {
         ObjectOutputStream oos = null;
@@ -17,6 +22,11 @@ public class BinaryPersistency implements Persistency {
         }
     }
 
+    /**
+     *
+     * @param dateiname
+     * @return
+     */
     @Override
     public Zettelkasten load(String dateiname) {
         ObjectInputStream ois = null;

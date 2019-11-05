@@ -8,8 +8,16 @@ import java.util.ArrayList;
 
 public class DatabasePersistency implements Persistency {
 
+    /**
+     *
+     */
     private ObjectContainer db;
 
+    /**
+     *
+     * @param zk
+     * @param dateiname
+     */
     @Override
     public void save(Zettelkasten zk, String dateiname) {
         this.db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),dateiname);
@@ -17,6 +25,11 @@ public class DatabasePersistency implements Persistency {
         db.close();
     }
 
+    /**
+     *
+     * @param dateiname
+     * @return
+     */
     @Override
     public Zettelkasten load(String dateiname) {
         this.db = Db4oEmbedded.openFile(Db4oEmbedded.newConfiguration(),dateiname);

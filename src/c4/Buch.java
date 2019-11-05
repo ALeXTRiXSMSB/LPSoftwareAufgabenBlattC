@@ -2,11 +2,22 @@ package c4;
 
 public class Buch extends Medium {
 
+    /**
+     *
+     */
     private int erscheinungsjahr;
     private String verlag;
     private String isbn;
     private String verfasser;
 
+    /**
+     *
+     * @param _titel
+     * @param _erscheinungsjahr
+     * @param _verlag
+     * @param _isbn
+     * @param _verfasser
+     */
     public Buch(String _titel, int _erscheinungsjahr, String _verlag, String _isbn, String _verfasser) {
         super(_titel);
         this.setErscheinungsjahr(_erscheinungsjahr);
@@ -15,26 +26,50 @@ public class Buch extends Medium {
         this.setVerlag(_verlag);
     }
 
+    /**
+     *
+     * @return
+     */
     public int getErscheinungsjahr() {
         return erscheinungsjahr;
     }
 
+    /**
+     *
+     * @param erscheinungsjahr
+     */
     public void setErscheinungsjahr(int erscheinungsjahr) {
         this.erscheinungsjahr = erscheinungsjahr;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getVerlag() {
         return verlag;
     }
 
+    /**
+     *
+     * @param verlag
+     */
     public void setVerlag(String verlag) {
         this.verlag = verlag;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getIsbn() {
         return isbn;
     }
 
+    /**
+     *
+     * @param isbn
+     */
     public void setIsbn(String isbn) {
         int laengeisbn = 0;
         for (int i = 0; i < isbn.length(); i++) {
@@ -76,14 +111,27 @@ public class Buch extends Medium {
         }
     }
 
+    /**
+     *
+     * @return
+     */
     public String getVerfasser() {
         return verfasser;
     }
 
+    /**
+     *
+     * @param verfasser
+     */
     public void setVerfasser(String verfasser) {
         this.verfasser = verfasser;
     }
 
+    /**
+     *
+     * @param isbn
+     * @return
+     */
     public static boolean checkISBN10(int[] isbn) {
         int sum = 0;
         for (int i = 1; i <= isbn.length; i++) {
@@ -92,6 +140,11 @@ public class Buch extends Medium {
         return sum % 11 == 0;
     }
 
+    /**
+     *
+     * @param isbn
+     * @return
+     */
     public static boolean checkISBN13(int[] isbn) {
         int sum = 0;
         for (int i = 1; i < isbn.length; i++) {
@@ -106,6 +159,10 @@ public class Buch extends Medium {
         return isbn[isbn.length - 1] == check;
     }
 
+    /**
+     *
+     * @return
+     */
     public String calculateRepresentation() {
         StringBuilder rueckgabe = new StringBuilder();
         rueckgabe.append(super.calculateRepresentation() + " ")

@@ -2,6 +2,11 @@ package c2;
 
 public class Programm {
 
+
+    /**
+     * Programm Einstiegspunkt
+     * @param args
+     */
     public static void main(String[] args){
         try{
             //Familie mit kinder

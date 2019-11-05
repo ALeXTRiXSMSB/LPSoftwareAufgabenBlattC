@@ -3,6 +3,12 @@ package c4;
 import java.io.*;
 
 public class HumanReadablePersistency implements Persistency {
+
+    /**
+     * Überschriebene Methode zum Speichern eines Zettelkastens in Menschenlesbarem Format
+     * @param zk
+     * @param dateiname
+     */
     @Override
     public void save(Zettelkasten zk, String dateiname) {
         OutputStreamWriter osw = null;
@@ -23,6 +29,11 @@ public class HumanReadablePersistency implements Persistency {
         }
     }
 
+    /**
+     * Überschriebene Methode zum Laden eines Zettelkastens aus einer Datei die Menschenlesbar gespeichert wurde
+     * @param dateiname
+     * @return
+     */
     @Override
     public Zettelkasten load(String dateiname) {
         try{

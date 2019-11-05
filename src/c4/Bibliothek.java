@@ -2,6 +2,10 @@ package c4;
 
 public class Bibliothek {
 
+    /**
+     * Programm Einstiegspunkt
+     * @param args
+     */
     public static void main(String[] args){
         Zettelkasten zettelkasten = new Zettelkasten();
         zettelkasten.addMedium(new CD("Live At Wembley","Queen","Parlophone (EMI)"));

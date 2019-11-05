@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Programm {
 
     /**
+     * Programm Einstiegspunkt
      * @param args
      */
     public static void main(String[] args) {
