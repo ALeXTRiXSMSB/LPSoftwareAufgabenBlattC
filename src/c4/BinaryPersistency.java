@@ -11,7 +11,7 @@ public class BinaryPersistency implements Persistency {
      */
     @Override
     public void save(Zettelkasten zk, String dateiname) {
-        ObjectOutputStream oos = null;
+        ObjectOutputStream oos;
         try {
             oos = new ObjectOutputStream(new FileOutputStream(dateiname));
             oos.writeObject(zk);
@@ -29,7 +29,7 @@ public class BinaryPersistency implements Persistency {
      */
     @Override
     public Zettelkasten load(String dateiname) {
-        ObjectInputStream ois = null;
+        ObjectInputStream ois;
         try {
             ois = new ObjectInputStream(new FileInputStream(dateiname));
             Object o = ois.readObject();
